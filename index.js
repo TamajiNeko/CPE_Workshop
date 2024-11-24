@@ -1,9 +1,11 @@
 const express = require("express")
 const body_parser = require("body-parser")
 const db = require("./services/db")
+const cors = require("cors")
 
 const app = express()
 
+app.use(cors())
 app.use(express())
 app.use(body_parser.json())
 app.use(body_parser.urlencoded({extended: true}))
